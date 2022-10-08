@@ -6,10 +6,9 @@ import styles from './App.module.scss'
 
 import Home from './pages/home/Home'
 
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Favourite from './pages/favourite/Favourite'
 import Rated from './pages/rated/Rated'
-import Nav from './components/Nav/Nav'
 
 const router = createBrowserRouter([
   {
