@@ -1,9 +1,23 @@
 .nav {
-  margin: 0 auto;
-  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  background-color: #193448;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: -1px 22px 65px -12px rgba(12, 255, 255, 0.5);
+  z-index: 1000;
 }
 
 .list {
   display: flex;
   gap: 20px;
+}
+
+.li {
+  color: aqua;
+  text-decoration: none;
 }

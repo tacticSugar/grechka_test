@@ -5,14 +5,20 @@ function Nav() {
   return (
     <nav className={styles.nav}>
       <ul className={styles.list}>
-        <li className={styles.li}>
-          <Link to={`/`}>Home</Link>
+        <li>
+          <Link className={styles.li} to={`/`}>
+            Home
+          </Link>
         </li>
-        <li className={styles.li}>
-          <Link to={`/favourite`}>Favourite</Link>
+        <li>
+          <Link className={styles.li} to={`/favourite`}>
+            Favourite
+          </Link>
         </li>
-        <li className={styles.li}>
-          <Link to={`/rated`}>Rated</Link>
+        <li>
+          <Link className={styles.li} to={`/rated`}>
+            Rated
+          </Link>
         </li>
       </ul>
     </nav>

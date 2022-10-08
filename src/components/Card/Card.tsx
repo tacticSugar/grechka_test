@@ -4,6 +4,7 @@ import { addFavorite } from '../../redux/favoriteSlice'
 import { useAppSelector } from '../../redux/store'
 import { Film } from '../CardList/CardList'
 import ModalRate from '../ModalRate/ModalRate'
+import Stars from '../ModalRate/Stars'
 import styles from './Card.module.scss'
 
 interface CardProps {
@@ -41,33 +42,39 @@ function Card({ film }: CardProps) {
       (currentRate.plot + currentRate.camera + currentRate.actor) / 3
     )
   }
+  console.log(rating, film.name)
 
   return (
-    <div className={styles.card}>
-      <img className={styles.card__img} src={src} alt="cart-img" />
-      <div className={styles.card__textContainer}>
-        <h1 className={styles.card__title}>
-          {name}
+    <div className={styles.wrapper}>
+      <div className={styles.card}>
+        <img className={styles.card__image} src={src} alt="cart-img" />
+        <div className={styles.card__content}>
+          <h1 className={styles.card__title}>{name}</h1>
           {rating !== undefined && (
-            <span className={styles.rate}>Ваша оценка: {rating}</span>
+            <div className={styles.card__rate}>
+              <div className={styles.card__fixhehe}>Ваша оценка: </div>
+              <Stars value={rating} key={rating} />
+            </div>
           )}
-        </h1>
+          <p className={styles.card__description}>{description}</p>
+          <div className={styles.card__buttons}>
+            <button
+              className={styles.card__buttons_rate}
+              onClick={handleClickRate}
+            >
+              {rateBtnText}
+            </button>
 
-        <p className={styles.card__description}>{description}</p>
-        <div className={styles.card__buttons}>
-          <button
-            className={styles.card__buttons_rate}
-            onClick={handleClickRate}
-          >
-            {rateBtnText}
-          </button>
-
-          <button className={styles.card__buttons_fav} onClick={handleClickFav}>
-            {favBtnText}
-          </button>
+            <button
+              className={styles.card__buttons_fav}
+              onClick={handleClickFav}
+            >
+              {favBtnText}
+            </button>
+          </div>
         </div>
+        {showModal && <ModalRate id={id} onClose={handleClose} />}
       </div>
-      {showModal && <ModalRate id={id} onClose={handleClose} />}
     </div>
   )
 }

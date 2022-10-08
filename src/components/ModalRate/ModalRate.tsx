@@ -23,7 +23,6 @@ function ModalRate({ id, onClose }: ModalProps) {
 
   function handleClick() {
     if (isReady) {
-      console.log({ plot, actor, camera })
       dispatch(
         addRate({
           plot,

@@ -1,7 +1,7 @@
 import ReactStars from 'react-rating-stars-component'
 
 type StarProps = {
-  onChange: (rate: number) => void
+  onChange?: (rate: number) => void
   value: number
 }
 

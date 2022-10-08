@@ -13,7 +13,7 @@ export type Props = {
 
 function CardList(props: Props) {
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       {props.films.map((film) => {
         return <Card film={film} key={film.id} />
       })}
