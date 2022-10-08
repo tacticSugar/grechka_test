@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import CardList from '../../components/CardList/CardList'
-import ModalRate from '../../components/ModalRate/ModalRate'
 import Nav from '../../components/Nav/Nav'
 import { getFilms } from '../../redux/filmsSlice'
 import { AppDispatch, useAppSelector } from '../../redux/store'
