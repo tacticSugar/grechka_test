@@ -1,11 +1,12 @@
 .card {
   height: 300px;
   width: 300px;
-  border: 1px solid;
-
+  background-color: #e1efff;
+  border-radius: 5px;
+  overflow: hidden;
   &__img {
-    height: 200px;
-    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1.5;
   }
 
   &__textContainer {
@@ -19,6 +20,12 @@
 
   &__title {
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    & > .rate {
+      font-weight: normal;
+    }
   }
   &__description {
     display: -webkit-box;
@@ -35,11 +42,15 @@
     justify-content: space-around;
 
     &_rate {
-      border: 1px solid red;
+      background-color: #a5ff90;
+      border-radius: 5px;
+      padding: 8px;
     }
 
     &_fav {
-      border: 1px solid blue;
+      background-color: #f9e86f;
+      border-radius: 5px;
+      padding: 8px;
     }
   }
 }
