@@ -4,9 +4,9 @@ import './assets/fonts/fonts.scss'
 import 'scss-reset/_reset.scss'
 import styles from './App.module.scss'
 
-import Home from './pages/home/Home'
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import Home from './pages/home/Home'
 import Favourite from './pages/favourite/Favourite'
 import Rated from './pages/rated/Rated'
 
